@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDU</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/mdu.css" %}" /> 
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            M&nbsp&nbspD&nbsp&nbspU
+        </div>
+        <div class="main">
+            <div class="left">
+                <p>
+                    明道大學位在彰化縣埤頭鄉，相鄰田尾、北斗、溪州及埤頭等四鄉鎮，
+                    明道大學於2001年成立，為彰化縣一私立大學。明道大學總佔地約30
+                    公頃，校園內建築物皆富有設計感且高雅別
+                    緻，主要建築設施，大多數由明道大
+                    學創辦人親自以歷代中國教育界先賢的名號命名，如武訓大道、白如橋、適之橋
+                    等等，賦予特殊教育意義，藉此勉勵學子們能夠堅持不懈地用功向學。
+                    <br><br>
+                    明道大學校園內湖景綠地交織如畫，校方用心地在校園內打造出宛如
+                    熱帶雨林般的綠意盎然景色，如椰林大道、落雨松林、蠡澤湖、湖岸碼頭及九重葛隧道等
+                    ，大片校園綠地上設有特別的裝置藝術，供人欣賞。明道
+                    大學並推廣有機校園，成功吸引瀕臨絕種的黃鸝鳥現身，規劃出螢
+                    火蟲復育濕地，當螢火蟲季到來
+                    時，校園內螢火蟲閃爍紛飛；校園內為推廣體適能發展建全也設
+                    置體能探索園區讓師生能夠來此強身健體。
+                </p>
+            </div>
+            <div class="right">
+                {% for name in imgname %}
+                <div class="pict"><img src="{% static name %}" alt="jpg" width="100%"></div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer">
+            <br><br><br>
+            &copy 2022
+        </div>
+    </div>
+    
+</body>
+</html>

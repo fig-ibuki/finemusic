@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本資料</title>
+    {% load static %}
+</head>
+<body>
+    <img src="{% static "images/game.png" %}" alt="game" width="32" height="32">
+    <h3>
+    {% for person in persons %}
+        <h2>第 {{forloop.counter}} 位員工</h2>
+        <ul>
+            <li>Name : {{person.name}}</li>
+            <li>Phone : {{person.phone}}</li>
+            <li>Age : {{person.age}}</li>
+            {% if person.age < 18 %}
+            <p>未成年!</p>
+            {% endif %}
+        </ul>
+    {% endfor %}
+    </h3>
+</body>
+</html>

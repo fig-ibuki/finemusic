@@ -1,0 +1,77 @@
+.box {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: burlywood;
+}
+
+.header {
+    height: 100px;
+    background-image: url("../mdu_img/headerbg.jpg");
+    text-align: center;
+    font-size: 130px;
+    color: darkkhaki;
+}
+.main {
+    background-color: aqua;
+}
+.left {
+    width: 30%;
+    float: left;
+}
+.right {
+    margin-top: 20px;
+    width: 69%;
+    float: right;
+}
+.footer {
+    clear: both ;
+    height: 100px;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+.pict {
+    width: 33%;
+    float: left;
+    padding-top: 2px;
+}
+p {
+    width: 98%;
+    font-family: '標楷體';
+    font-size: 21px;
+}
+@media screen and (max-width:1200px) {
+    .box {
+        width: 100%;
+    }
+    .pict{
+        width: 50%;
+    }
+    p {
+        width: 98%;
+        font-family: '標楷體';
+        font-size: 26px;
+    }
+}
+@media screen and (max-width:720px){
+    .box {
+        width: 100%;
+        background-color: darkcyan;
+    }
+    .left{
+        width: 100%;
+        float: inline-start;
+    }
+    .right{
+        width: 100%;
+    }
+    .pict {
+        width: 100%;
+    }
+    p {
+        width: 98%;
+        font-family: '標楷體';
+        font-size: 26px;
+        color:blanchedalmond;
+    }
+}

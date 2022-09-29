@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/fstyle20220819.css" %}" /> 
+    <title>FineMusic | {% block title %}{% endblock %}</title>
+    {% block header %}{% endblock %}
+</head>
+<body>
+    <div class="main_box">
+        <button>
+            <a href="/sheetBot/">Home</a>
+        </button>
+        <button>
+            <a href="/sheetBot/search">Search</a>
+        </button>
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>

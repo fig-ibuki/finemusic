@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--有提示的insert-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>FineMusic|Insert</title>
+    <link rel="stylesheet" href="{% static "css/fstyle20220819.css" %}" /> 
+</head>
+<body>
+    <div class="main_box">
+        <button>
+            <a href="/sheetBot/">Home</a>
+        </button>
+        <h1>Insert</h1>
+        <form action="post/" method="post">
+            {% csrf_token %}
+            <table class="insert_table">
+                <tr>
+                    <td>曲名</td>
+                    <td>
+                        {% if erraddr.0 == True %}
+                        <h6 class="warning">*f</h6>
+                        {% endif %}
+                        <input type="text" name="sname" maxlength="50" minlength="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>語言</td>
+                    <td>
+                        {% if erraddr.1 == True %}
+                        <h6 class="warning">*f</h6>
+                        {% endif %}
+                        <input type="radio" name="slanguage" value="ch">
+                        <label for="ch">中文</label>
+                        <input type="radio" name="slanguage" value="jp">
+                        <label for="jp">日本語</label>
+                        <input type="radio" name="slanguage" value="en">
+                        <label for="en">ENG</label>
+                        <input type="radio" name="slanguage" value="tw">
+                        <label for="tw">台語</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>樂團</td>
+                    <td>
+                        {% if erraddr.2 == True %}
+                        <h6 class="warning">*f</h6>
+                        {% endif %}
+                        <select name="band">
+                            <option value="讚美之泉">讚美之泉</option>
+                            <option value="約書亞">約書亞</option>
+                            <option value="以斯拉">以斯拉</option>
+                            <option value="生命河">生命河</option>
+                            <option value="有情天">有情天</option>
+                            <option value="我心旋律">我心旋律</option>
+                            <option value="祝瑞蓮">祝瑞蓮</option>
+                            <option value="華人的讚美敬拜">華人的讚美敬拜</option>
+                            <option value="慕主先鋒">慕主先鋒</option>
+                            <option value="小羊詩歌">小羊詩歌</option>
+                            <option value="萬國敬拜與讚美">萬國敬拜與讚美</option>
+                            <option value="長沢崇史">長沢崇史</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>RID</td>
+                    <td>
+                        {% if erraddr.3 == True %}
+                        <h6 class="warning">*f</h6>
+                        {% endif %}
+                        <input type="text" name="srid" maxlength="8">
+                    </td>
+                </tr>
+                
+                <tr>樂譜</tr>
+                <tr>
+                    {% if erraddr.4 == True %}
+                        <h6 class="warning">*f</h6>
+                        {% endif %}
+                    <input type="file" name="Isheet">
+                    <input type="file" name="Csheet">
+                    <input type="file" name="Psheet">
+                    <!--放檔案(譜)上來-->
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

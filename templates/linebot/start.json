@@ -1,0 +1,69 @@
+{
+    "type": "bubble",
+    "size": "mega",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "請選擇搜尋方式：",
+          "weight": "bold",
+          "size": "lg",
+          "style": "normal"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "postback",
+            "label": "曲名",
+            "data": "action=insert&searchby=name"
+          },
+          "color": "#FFF8CF",
+          "margin": "sm"
+        },
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "postback",
+            "label": "Real ID",
+            "data": "action=insert&searchby=rid"
+          },
+          "color": "#FFF8CF",
+          "margin": "sm"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "結束",
+            "data": "action=shutdown"
+          },
+          "color": "#FFF8CF"
+        }
+      ],
+      "flex": 0
+    },
+    "styles": {
+      "header": {
+        "backgroundColor": "#A52A2A"
+      },
+      "body": {
+        "backgroundColor": "#CD853F"
+      },
+      "footer": {
+        "backgroundColor": "#CD853F"
+      }
+    }
+  }

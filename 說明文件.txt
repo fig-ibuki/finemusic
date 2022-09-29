@@ -1,0 +1,5 @@
+1.執行reflaship>ngrok.bat(不要關掉)，把產生的ip貼在ip.txt並存檔
+2.把ip貼在finemusic/setting裡的CSRF_TRUSTED_ORIGINS = ['']中 35行
+#3.執行reflashline，(把ip.txt讀入後清空)更新webhook(要自己開手機收驗證)
+4.執行runserver.bat
+開始提供服務

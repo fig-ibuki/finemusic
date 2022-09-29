@@ -1,0 +1,85 @@
+{
+    "type": "bubble",
+    "size": "mega",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "很抱歉，沒有相符項目...",
+          "weight": "bold",
+          "size": "lg",
+          "style": "normal",
+          "contents": [
+            {
+              "type": "span",
+              "text": "很抱歉，沒有相符項目...",
+              "size": "xl"
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "由於目前搜尋條件比較嚴格，請輸入完全正確的曲名/RealID。日後將升級搜尋方式，敬請期待。",
+              "size": "md",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "postback",
+            "label": "重新輸入關鍵字",
+            "data": "action=insert&searchby=name"
+          },
+          "color": "#FFF8CF",
+          "margin": "sm"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "重新選擇搜尋方式",
+            "data": "action=open"
+          },
+          "color": "#FFF8CF"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "結束",
+            "data": "action=shutdown"
+          },
+          "color": "#FFF8CF"
+        }
+      ],
+      "flex": 0
+    },
+    "styles": {
+      "header": {
+        "backgroundColor": "#A52A2A"
+      },
+      "body": {
+        "backgroundColor": "#CD853F"
+      },
+      "footer": {
+        "backgroundColor": "#CD853F"
+      }
+    }
+  }

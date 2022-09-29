@@ -1,0 +1,70 @@
+search_bugy.html
+=====================
+
+{% extends 'base/base.html'%}
+
+{%block title%}Search to Bugy{%endblock%}
+{% block header %}{% endblock %}
+
+{% block body %}
+<form action="." method="post" name="commen">
+    {% csrf_token %}
+    <table>
+        <th>
+            請輸入關鍵字搜尋
+        </th>
+        <tr>
+            <td>歌名</td>
+            <td>
+                <input type="text" name="sname" maxlength="40">
+            </td>
+        </tr>
+        <tr>
+            <td>類型</td>
+            <td>
+                <select name="type">
+                    <option value="iyrics">歌詞</option>
+                    <option value="chord">吉他和弦</option>
+                    <option value="piano">五線譜</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>樂團</td>
+            <td>
+                <select name="sband">
+                    <option selected value="">無</option>
+                    <option value="讚美之泉">讚美之泉</option>
+                    <option value="約書亞">約書亞</option>
+                    <option value="以斯拉">以斯拉</option>
+                    <option value="生命河">生命河</option>
+                    <option value="有情天">有情天</option>
+                    <option value="我心旋律">我心旋律</option>
+                    <option value="祝瑞蓮">祝瑞蓮</option>
+                    <option value="華人的讚美敬拜">華人的讚美敬拜</option>
+                    <option value="慕主先鋒">慕主先鋒</option>
+                    <option value="小羊詩歌">小羊詩歌</option>
+                    <option value="萬國敬拜與讚美">萬國敬拜與讚美</option>
+                    <option value="長沢崇史">長沢崇史</option>
+                    <option value="其他">其他</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                其他關鍵字?
+            </td>
+            <td>
+                <textarea name="keyword" placeholder="like : 歌詞片段..."></textarea>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="搜尋">
+            </td>
+        </tr>
+    </table>
+
+</form>
+{% endblock %}
